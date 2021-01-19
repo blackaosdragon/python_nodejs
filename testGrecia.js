@@ -15,7 +15,7 @@ app.get('/', (req,res) => {
     let process = spawn('python', ['./test_python.py']);
     process.stdout.on('data',function(data){
         let mensaje = data.toString()
-        let enviar;
+        let enviar = '';
 
         console.log(mensaje.length)
         for (let i = 0; i<mensaje.length; i++){
