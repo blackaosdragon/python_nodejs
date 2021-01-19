@@ -15,10 +15,16 @@ app.get('/', (req,res) => {
     let process = spawn('python', ['./test_python.py']);
     process.stdout.on('data',function(data){
         let mensaje = data.toString()
-        console.log(mensaje)        
+        let enviar;
+        for (let i = 0; i>mensaje.length-2; i++){
+            enviar[i] = mensaje[i]
+        }
+        console.log(enviar)
+
         const payload = {
             info: mensaje
         }
+
         res.send(payload)
     })
 })
