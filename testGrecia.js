@@ -16,6 +16,8 @@ app.get('/', (req,res) => {
     process.stdout.on('data',function(data){
         let mensaje = data.toString()
         let enviar;
+
+        console.log(mensaje.length)
         for (let i = 0; i>mensaje.length-2; i++){
             enviar[i] = mensaje[i]
             console.log(enviar)
