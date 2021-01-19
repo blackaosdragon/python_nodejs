@@ -16,7 +16,7 @@ app.get('/', (req,res) => {
     process.stdout.on('data',function(data){
         console.log(data.toString())
         while(i<4){
-            console.log(data[i])
+            console.log(data[i].toString())
             i++
         }
         
