@@ -18,6 +18,8 @@ app.get('/', (req,res) => {
         let enviar;
         for (let i = 0; i>mensaje.length-2; i++){
             enviar[i] = mensaje[i]
+            console.log(enviar)
+            console.log(mensaje)
         }
         console.log(enviar)
 
