@@ -14,14 +14,10 @@ app.listen( puerto , ()=>{
 app.get('/', (req,res) => {
     let process = spawn('python', ['./test_python.py']);
     process.stdout.on('data',function(data){
-        console.log(data.toString())
-        while(i<4){
-            console.log(data[i].toString())
-            i++
-        }
-        
+        let mensaje = data.toString()
+        console.log(mensaje)        
         const payload = {
-            info: data.toString()
+            info: mensaje
         }
         res.send(payload)
     })
